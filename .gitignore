@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+venv/
+
+# Model outputs
+outputs/
+
+# Datasets
+data/oasst_preprocessed/
+data/*processed*/
+data/cache*
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
