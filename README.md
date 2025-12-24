@@ -73,7 +73,7 @@ where \(\mathcal{L}_i\) is the causal language modeling loss.
 |------|----------------------|------------|
 | Full Fine-Tuning | ~124M | **13.97** |
 | LoRA (r=8) | ~1–2M | ~25.7 |
-| LoRA (r=32) | ~4–5M | **~20.2** |
+| LoRA (r=32) | ~4–5M | **~21.9** |
 
 ### Key Observations
 - Low-rank LoRA (r=8) significantly underfits instruction-following data
@@ -84,9 +84,49 @@ where \(\mathcal{L}_i\) is the causal language modeling loss.
 ---
 
 ## Project Structure
+lora-vs-finetuning/
+│
+├── data/
+│ └── prepare_oasst.py # Dataset preprocessing
+│
+├── training/
+│ ├── train_full_ft.py # Full fine-tuning script
+│ └── train_lora.py # LoRA fine-tuning script
+│
+├── evaluation/
+│ └── perplexity.py # Perplexity evaluation
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
 
 
 
+Model checkpoints and processed datasets are intentionally excluded for reproducibility and size constraints.
+
+---
+
+## How to Run
+
+### 1. Setup environment
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+### 2. Prepare Dataset
+```bash
+python data/prepare_oasst.py
+```
+### 3. Train Models
+```bash
+python training/train_full_ft.py
+python training/train_lora.py
+```
+### 4. Evaluate Perplexity
+```bash
+python evaluation/perplexity.py
+```
 
 
 
