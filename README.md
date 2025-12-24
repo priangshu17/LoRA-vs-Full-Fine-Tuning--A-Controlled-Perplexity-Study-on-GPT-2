@@ -84,24 +84,22 @@ where \(\mathcal{L}_i\) is the causal language modeling loss.
 ---
 
 ## Project Structure
+```text
 lora-vs-finetuning/
-│
 ├── data/
-│ └── prepare_oasst.py # Dataset preprocessing
+│   └── prepare_oasst.py        # Dataset preprocessing
 │
 ├── training/
-│ ├── train_full_ft.py # Full fine-tuning script
-│ └── train_lora.py # LoRA fine-tuning script
+│   ├── train_full_ft.py        # Full fine-tuning script
+│   └── train_lora.py           # LoRA fine-tuning script
 │
 ├── evaluation/
-│ └── perplexity.py # Perplexity evaluation
+│   └── perplexity.py           # Perplexity evaluation
 │
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
-
-
+```
 Model checkpoints and processed datasets are intentionally excluded for reproducibility and size constraints.
 
 ---
