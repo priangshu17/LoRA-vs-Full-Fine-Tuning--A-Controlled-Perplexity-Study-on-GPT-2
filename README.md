@@ -71,9 +71,9 @@ where \(\mathcal{L}_i\) is the causal language modeling loss.
 
 | Method | Trainable Parameters | Perplexity |
 |------|----------------------|------------|
-| Full Fine-Tuning | ~124M | **13.97** |
-| LoRA (r=8) | ~1–2M | ~25.7 |
-| LoRA (r=32) | ~4–5M | **~21.9** |
+| Full Fine-Tuning | ~125M | **13.97** |
+| LoRA (r=8) | ~1M | ~25.7 |
+| LoRA (r=32) | ~3.2M | **~21.9** |
 
 ### Key Observations
 - Low-rank LoRA (r=8) significantly underfits instruction-following data
